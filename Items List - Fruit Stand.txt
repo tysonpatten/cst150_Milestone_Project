@@ -1,0 +1,14 @@
+Fruit Stand Inventory Items List
+
+Apples
+Bananas
+Oranges
+Peaches
+Lemons
+Limes
+Pears
+Kiwis
+Watermelon
+Grapefruit
+DragonFruit
+Pineapple
