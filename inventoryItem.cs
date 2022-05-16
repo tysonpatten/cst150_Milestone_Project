@@ -1,103 +1,93 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Class1
+namespace InventoryManagementSystem
 {
-    class inventoryItem
+    public class inventoryItem
     {
-        // VARIABLES
+        // variables
         private string name;
         private int quantity;
         private double price;
         private int id;
 
-
-        // CONSTRUCTOR
-        public inventoryItem(string name, int quantity, int id, int price)
+        // constructor
+        public inventoryItem(string name, int quantity, double price, int id)
         {
             this.name = name;
             this.quantity = quantity;
-            this.id = id;
             this.price = price;
-
+            this.id = id;
         }
 
-        // INITIALIZER
-        public inventoryItem()
+        // getters and setters
+        public string getName()
         {
+            return name;
         }
 
-
-        // NAME GETTER AND SETTER
         public void setName(string name)
         {
             this.name = name;
         }
-        public void getName()
+
+        public int getQuantity()
         {
-            Console.WriteLine("Item: " + name);
+            return quantity;
         }
 
-
-        // QTY GETTER AND SETTER
         public void setQuantity(int quantity)
         {
             this.quantity = quantity;
         }
-        public void getQuantity()
+
+        public double getPrice()
         {
-            Console.WriteLine("Quantity: " + quantity);
+            return price;
         }
 
-        // PRICE GETTER AND SETTER
-        public void setPrice(int price)
+        public void setPrice(double price)
         {
             this.price = price;
         }
-        public void getPrice()
+
+        public int getId()
         {
-            Console.WriteLine("Price: " + price);
+            return id;
         }
 
-        // ID GETTER + SETTER
         public void setId(int id)
         {
             this.id = id;
         }
-        public void getId()
+
+        // toString
+        public override string ToString()
         {
-            Console.WriteLine("ID: " + id);
+            return "Name: " + name + "\nQuantity: " + quantity + "\nPrice: " + price + "\nID: " + id;
         }
 
-        // PRINT ITEM METHOD FOR TESTS
-        public void printItem()
+        // equals
+        public override bool Equals(object obj)
         {
-            Console.WriteLine("Item: " + name + " | Quantity: " + quantity + " | ID: " + id + " | Price: " + price);
+            if (obj == null)
+            {
+                return false;
+            }
+
+            inventoryItem item = obj as inventoryItem;
+            if ((object)item == null)
+            {
+                return false;
+            }
+
+            return (this.id == item.id);
         }
 
 
-        static void Main()
-        {
-            inventoryItem testItem = new inventoryItem();
-
-            testItem.name = "apple";
-            testItem.quantity = 12;
-            testItem.price = 0.99;
-            testItem.id = 123456;
-
-
-            testItem.printItem();
-
-            inventoryItem textItem2 = new inventoryItem();
-            textItem2.name = "bananas";
-            textItem2.quantity = 8;
-            textItem2.price = 1.29;
-            textItem2.id = 654321;
-
-            textItem2.printItem();
-
-
-        }
 
     }
-
 }
