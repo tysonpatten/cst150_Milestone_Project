@@ -16,3 +16,11 @@ Milestone 2:
 - Inventory Items Class C# file
 
 MS 2 WALKTHROUGH: https://www.loom.com/share/ef32c14ede624f27b2343b2e435c89f4
+
+Milestone 3:
+- UML Diagram for InventoryManager class
+- Console App for testing
+- InventoryManager Class C# file
+- Updated InventoryItems Class C# file
+
+MS 3 WALKTHROUGH: https://www.loom.com/share/62594ce7793e4554a2388a8d03381a2f
